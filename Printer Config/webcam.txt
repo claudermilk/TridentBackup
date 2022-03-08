@@ -13,7 +13,7 @@
 #
 # Defaults to auto
 #
-#camera="auto"
+camera="auto"
 
 ### Additional options to supply to MJPG Streamer for the USB camera
 #
