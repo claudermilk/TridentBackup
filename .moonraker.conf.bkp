@@ -43,11 +43,6 @@ type: web
 repo: mainsail-crew/mainsail
 path: ~/mainsail
 
-[update_manager client fluidd]
-type: web
-repo: cadriel/fluidd
-path: ~/fluidd
-
 [update_manager KlipperScreen]
 type: git_repo
 path: ~/KlipperScreen
