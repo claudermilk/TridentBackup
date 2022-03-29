@@ -1,4 +1,4 @@
 [Variables]
-filament = {'index': 0, 'array': [{'hotend': 240.0, 'name': u'ABS', 'bed': 100.0}, {'bed': 60.0, 'name': u'PLA', 'hotend': 210.0}]}
+filament = {'index': 1, 'array': [{'hotend': 240.0, 'name': u'ABS', 'bed': 100.0}, {'bed': 60.0, 'name': u'PLA', 'hotend': 210.0}]}
 filament_loaded = True
 
