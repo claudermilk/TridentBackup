@@ -1,4 +1,6 @@
 [Variables]
-filament = {'index': 1, 'array': [{'hotend': 240.0, 'name': u'ABS', 'bed': 100.0}, {'bed': 60.0, 'name': u'PLA', 'hotend': 210.0}]}
+filament = {'index': 0, 'array': [{'bed': 100.0, 'name': u'ABS', 'hotend': 240.0}, {'hotend': 210.0, 'name': u'PLA', 'bed': 60.0}]}
 filament_loaded = True
+plates = {'index': 0, 'array': [{'name': u'West3D Smooth', 'offset': 0.0}, {'name': u'West3D Textured', 'offset': -0.02}, {'name': u'Fysetc Textured', 'offset': -0.02}]}
+webcam_state = 'off'
 
