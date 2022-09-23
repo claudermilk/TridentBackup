@@ -29,6 +29,8 @@ trusted_clients =
 
 [history]
 
+[timelapse]
+
 [update_manager]
 refresh_interval = 168
 
@@ -68,4 +70,11 @@ primary_branch = main
 path = ~/moonraker-timelapse
 origin = https://github.com/mainsail-crew/moonraker-timelapse.git
 managed_services = klipper moonraker
+
+[update_manager sonar]
+type = git_repo
+path = ~/sonar
+origin = https://github.com/mainsail-crew/sonar.git
+primary_branch = main
+managed_services = sonar
 
