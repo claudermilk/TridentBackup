@@ -1,6 +1,7 @@
 #!/bin/bash
 
-config_folder=~/klipper_config
+#config_folder=~/klipper_config
+config_folder=~/printer_data/config
 klipper_folder=~/klipper
 moonraker_folder=~/moonraker
 mainsail_folder=~/mainsail

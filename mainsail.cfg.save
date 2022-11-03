@@ -12,8 +12,8 @@
 # use variable_park: False at CANCEL_PRINT to disallow the parking move
 
 [virtual_sdcard]
-path: /home/pi/printer_data/gcodes 
-# old path:  /home/pi/gcode_files
+path: /home/pi/gcode_files
+
 
 [pause_resume]
 
