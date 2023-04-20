@@ -38,7 +38,7 @@ path = ~/mainsail
 
 [update_manager client fluidd]
 type = web
-repo = cadriel/fluidd
+repo = ghcr.io/fluidd-core/fluidd
 path = ~/fluidd
 
 [update_manager KlipperScreen]
