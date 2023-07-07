@@ -1,6 +1,6 @@
 [Variables]
 filament = {'index': 0, 'array': [{'bed': 100.0, 'name': u'ABS', 'hotend': 240.0}, {'hotend': 210.0, 'name': u'PLA', 'bed': 60.0}, {'hotend': 250.0, 'name': u'TPU', 'bed': 40.0}, {'hotend': 240.0, 'name': u'PETG', 'bed': 85.0}, {'hotend': 260.0, 'name': u'NYLON', 'bed': 60.0}]}
 filament_loaded = True
-plates = {'index': 0, 'array': [{'name': u'West3D Smooth', 'offset': 0.0}, {'name': u'West3D Textured', 'offset': -0.075}, {'name': u'Fysetc Textured', 'offset': -0.02}]}
+plates = {'index': 1, 'array': [{'name': u'Smooth', 'offset': 0.0}, {'name': u'Textured', 'offset': -0.09}]}
 webcam_state = 'on'
 
