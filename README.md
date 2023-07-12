@@ -31,10 +31,8 @@ Obsolete Mods
 - _Klicky Probe_
 
 I have taken advantage of the include functionality and broken up my config into more task-focused files.
-- /backups. Retaining some uused config files in case I need them again. These are not in use.
 - /input_shaper. Output from input shaper runs.
 - /KAMP. The excellent Klipper Adaptive Mesh and Purge library. Used without modification.
-- /klicky. Klicky Probe config files. No longer in use.
 - /script. My shell scripts used in other macros.
 - bed_mesh.cfg. Basic bed mesh definition.
 - belt_tension.cfg. Belt tensioning testing.
@@ -45,9 +43,8 @@ I have taken advantage of the include functionality and broken up my config into
 - macros_backup.cfg. My macros to push the config here to GitHub.
 - macros_debug.cfg. A couple of informational macros swiped from Alex Zellner's repository.
 - macros_filament.cfg. All macros related to filaments. Ideas taken from Alex Zellner and heavily modified for my use. Maintains a "database" of filaments and sets a variable to the printer "knows" what is loaded.
-- macros_nonblocking_wait.cfg. Not in used. Saved here to examine the concept and decide if I want to try it out.
 - macros_nozzle_scrub.cfg. Routines for using the purge bucket & nozzle brush mod.
-- macros_plate.cfg. Same ideas as macros_filament. No longer really needed with Tap.
+- macros_plate.cfg. Same ideas as macros_filament. I am only using it to automate adding extra squish for textured plates.
 - macros_probe.cfg. Used to quickly switch between Tap and Klicky.
 - macros.cfg. This contains the primary macros for printing: print_start, print_end and and directly supporting macros.
 - mainsail.cfg. As with moonraker, the default with a few adjustments.
@@ -61,6 +58,5 @@ I have taken advantage of the include functionality and broken up my config into
 - timelapse.cfg. A set of macros for generating timelapses. See macro for source.
 - variable_setup.cfg. Create a centralized definition for a variable dictionary of preinter settings. Excellent concept taken from Alex Zellner and modified to my needs.
 - webcam.txt. Standard file, no mods made.
-
 - macros_refresh_obico.cfg. Update the Obico libraries. Not in use currently.
 - macros_webcam.cfg. Used to stop/start the webcam. Not really needed any more, but left in just in case.
