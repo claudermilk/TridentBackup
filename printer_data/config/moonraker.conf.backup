@@ -1,0 +1,55 @@
+[server]
+host: 0.0.0.0
+port: 7125
+klippy_uds_address: /home/pi/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients:
+    192.168.0.0/16
+    10.0.0.0/8
+    127.0.0.0/8
+    169.254.0.0/16
+    172.16.0.0/12
+    192.168.0.0/16
+    FE80::/10
+    ::1/128
+cors_domains:
+    *.lan
+    *.local
+    *://localhost
+    *://localhost:*
+    *://my.mainsail.xyz
+    *://app.fluidd.xyz
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+channel: dev
+refresh_interval: 168
+
+[update_manager fluidd]
+type: web
+channel: stable
+repo: fluidd-core/fluidd
+path: /home/pi/fluidd
+
+[update_manager KlipperScreen]
+type: git_repo
+path: /home/pi/KlipperScreen
+orgin: https://github.com/KlipperScreen/KlipperScreen.git
+manages_servcies: KlipperScreen
+env: /home/pi/.KlipperScreen-env/bin/python
+requirements: /home/pi/KlipperScreen/scripts/KlipperScreen-requirements.txt
+install_script: /home/pi/KlipperScreen/scripts/KlipperScreen-install.sh
+
+[update_manager mobileraker]
+type: git_repo
+path: /home/pi/mobileraker_companion
+origin: https://github.com/Clon1998/mobileraker_companion.git
+primary_branch: main
+managed_services: mobileraker
+env: /home/pi/mobileraker-env/bin/python
+requirements: /home/pi/mobileraker_companion/scripts/mobileraker-requirements.txt
+install_script: /home/pi/mobileraker_companion/scripts/install.sh
