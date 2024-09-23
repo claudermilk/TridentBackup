@@ -8,9 +8,7 @@
 ### Please set the paths accordingly.                             ###
 #####################################################################
 ### Path to your config folder where you want to store your input shaper files
-IS_FOLDER=~/klipper_config/input_shaper  # Fluidd still showing this directory
-#IS_FOLDER=~/printer_data/input_shaper
-#IS_FOLDER=/home/pi/printer_data/input_shaper
+IS_FOLDER=~/klipper_config/input_shaper
 ### number of results you want to keep
 STORE_RESULTS=5
 
@@ -72,7 +70,6 @@ function plot_belt_graph {
   for f in "${src[@]}"; do
     mv "${f}" "${isf}"/
   done
-  echo "Graph saved to ${isf}/resonances_belts_${date_ext}.png"
 }
 
 function remove_files {

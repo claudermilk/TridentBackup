@@ -1,11 +1,25 @@
 [server]
 host: 0.0.0.0
 port: 7125
+# Verbose logging used for debugging . Default False.
+#enable_debug_logging: False #deprectated now, commented out
+# The maximum size allowed for a file upload (in MiB).  Default 1024 MiB
+max_upload_size: 1024
 klippy_uds_address: /home/pi/printer_data/comms/klippy.sock
 
+[file_manager]
+#config_path: ~/klipper_config #deprecated commented out
+#log_path: ~/klipper_logs #deprecated commented out
+# post processing for object cancel. Not recommended for low resource SBCs such as a Pi Zero. Default False 
+enable_object_processing: True # activated to allow exclude object/region functionality
+
 [authorization]
+cors_domains:
+    https://my.mainsail.xyz
+    http://my.mainsail.xyz
+    http://*.local
+    http://*.lan
 trusted_clients:
-    192.168.0.0/16
     10.0.0.0/8
     127.0.0.0/8
     169.254.0.0/16
@@ -13,43 +27,56 @@ trusted_clients:
     192.168.0.0/16
     FE80::/10
     ::1/128
-cors_domains:
-    *.lan
-    *.local
-    *://localhost
-    *://localhost:*
-    *://my.mainsail.xyz
-    *://app.fluidd.xyz
+    127.0.0.1
 
+# enables partial support of Octoprint API
 [octoprint_compat]
 
+# enables moonraker to track and store print history.
 [history]
 
-[update_manager]
-channel: dev
-refresh_interval: 168
+[spoolman]
+server: http://gypsypi.local:7912 #http://192.168.68.71:7912
+#   URL to the Spoolman instance. This parameter must be provided.
+sync_rate: 5
+#   The interval, in seconds, between sync requests with the
+#   Spoolman server.  The default is 5.
+
+# enables moonraker timelapse component
+#[timelapse]
+##   Following basic configuration is default to most images and don't need
+##   to be changed in most scenarios. Only uncomment and change it if your
+##   Image differ from standart installations. In most common scenarios 
+##   a User only need [timelapse] in there configuration.
+#output_path: ~/timelapse/
+##   Directory where the generated video will be saved
+#frame_path: /tmp/timelapse/
+##   Directory where the temporary frames are saved
+#ffmpeg_binary_path: /usr/bin/ffmpeg
+##   Directory where ffmpeg is installed
+
+
+# [update_manager mainsail]
+# type: web
+# channel: stable
+# repo: mainsail-crew/mainsail
+# path: ~/mainsail
+
+[update_manager mainsail-config]
+type: git_repo
+primary_branch: master
+path: ~/mainsail-config
+origin: https://github.com/mainsail-crew/mainsail-config.git
+managed_services: klipper
+
+[update_manager mainsail]
+type: web
+channel: stable
+repo: mainsail-crew/mainsail
+path: ~/mainsail
 
 [update_manager fluidd]
 type: web
 channel: stable
 repo: fluidd-core/fluidd
-path: /home/pi/fluidd
-
-[update_manager KlipperScreen]
-type: git_repo
-path: /home/pi/KlipperScreen
-orgin: https://github.com/KlipperScreen/KlipperScreen.git
-manages_servcies: KlipperScreen
-env: /home/pi/.KlipperScreen-env/bin/python
-requirements: /home/pi/KlipperScreen/scripts/KlipperScreen-requirements.txt
-install_script: /home/pi/KlipperScreen/scripts/KlipperScreen-install.sh
-
-[update_manager mobileraker]
-type: git_repo
-path: /home/pi/mobileraker_companion
-origin: https://github.com/Clon1998/mobileraker_companion.git
-primary_branch: main
-managed_services: mobileraker
-env: /home/pi/mobileraker-env/bin/python
-requirements: /home/pi/mobileraker_companion/scripts/mobileraker-requirements.txt
-install_script: /home/pi/mobileraker_companion/scripts/install.sh
+path: ~/fluidd
